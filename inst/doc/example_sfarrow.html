@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>Getting started examples</title>
+
+<script src="data:application/javascript;base64,Ly8gUGFuZG9jIDIuOSBhZGRzIGF0dHJpYnV0ZXMgb24gYm90aCBoZWFkZXIgYW5kIGRpdi4gV2UgcmVtb3ZlIHRoZSBmb3JtZXIgKHRvCi8vIGJlIGNvbXBhdGlibGUgd2l0aCB0aGUgYmVoYXZpb3Igb2YgUGFuZG9jIDwgMi44KS4KZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGZ1bmN0aW9uKGUpIHsKICB2YXIgaHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJkaXYuc2VjdGlvbltjbGFzcyo9J2xldmVsJ10gPiA6Zmlyc3QtY2hpbGQiKTsKICB2YXIgaSwgaCwgYTsKICBmb3IgKGkgPSAwOyBpIDwgaHMubGVuZ3RoOyBpKyspIHsKICAgIGggPSBoc1tpXTsKICAgIGlmICghL15oWzEtNl0kL2kudGVzdChoLnRhZ05hbWUpKSBjb250aW51ZTsgIC8vIGl0IHNob3VsZCBiZSBhIGhlYWRlciBoMS1oNgogICAgYSA9IGguYXR0cmlidXRlczsKICAgIHdoaWxlIChhLmxlbmd0aCA+IDApIGgucmVtb3ZlQXR0cmlidXRlKGFbMF0ubmFtZSk7CiAgfQp9KTsK"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<link rel="stylesheet" href="data:text/css,body%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%20700px%3B%0Aoverflow%3A%20visible%3B%0Apadding%2Dleft%3A%202em%3B%0Apadding%2Dright%3A%202em%3B%0Afont%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%2014px%3B%0Aline%2Dheight%3A%201%2E35%3B%0A%7D%0A%23TOC%20%7B%0Aclear%3A%20both%3B%0Amargin%3A%200%200%2010px%2010px%3B%0Apadding%3A%204px%3B%0Awidth%3A%20400px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Aborder%2Dradius%3A%205px%3B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Afont%2Dsize%3A%2013px%3B%0Aline%2Dheight%3A%201%2E3%3B%0A%7D%0A%23TOC%20%2Etoctitle%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dsize%3A%2015px%3B%0Amargin%2Dleft%3A%205px%3B%0A%7D%0A%23TOC%20ul%20%7B%0Apadding%2Dleft%3A%2040px%3B%0Amargin%2Dleft%3A%20%2D1%2E5em%3B%0Amargin%2Dtop%3A%205px%3B%0Amargin%2Dbottom%3A%205px%3B%0A%7D%0A%23TOC%20ul%20ul%20%7B%0Amargin%2Dleft%3A%20%2D2em%3B%0A%7D%0A%23TOC%20li%20%7B%0Aline%2Dheight%3A%2016px%3B%0A%7D%0Atable%20%7B%0Amargin%3A%201em%20auto%3B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dcolor%3A%20%23DDDDDD%3B%0Aborder%2Dstyle%3A%20outset%3B%0Aborder%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0Aborder%2Dwidth%3A%202px%3B%0Apadding%3A%205px%3B%0Aborder%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dstyle%3A%20inset%3B%0Aline%2Dheight%3A%2018px%3B%0Apadding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0Aborder%2Dleft%2Dstyle%3A%20none%3B%0Aborder%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%2E5em%200%3B%0A%7D%0Ablockquote%20%7B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Apadding%3A%200%2E25em%200%2E75em%3B%0A%7D%0Ahr%20%7B%0Aborder%2Dstyle%3A%20solid%3B%0Aborder%3A%20none%3B%0Aborder%2Dtop%3A%201px%20solid%20%23777%3B%0Amargin%3A%2028px%200%3B%0A%7D%0Adl%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Adl%20dd%20%7B%0Amargin%2Dbottom%3A%2013px%3B%0Amargin%2Dleft%3A%2013px%3B%0A%7D%0Adl%20dt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Aul%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Aul%20li%20%7B%0Alist%2Dstyle%3A%20circle%20outside%3B%0A%7D%0Aul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Apre%2C%20code%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0Acolor%3A%20%23333%3B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%0A%7D%0Apre%20%7B%0Aborder%2Dradius%3A%203px%3B%0Amargin%3A%205px%200px%2010px%200px%3B%0Apadding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0Afont%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0Apadding%3A%202px%200px%3B%0A%7D%0Adiv%2Efigure%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0Abackground%2Dcolor%3A%20%23FFFFFF%3B%0Apadding%3A%202px%3B%0Aborder%3A%201px%20solid%20%23DDDDDD%3B%0Aborder%2Dradius%3A%203px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Amargin%3A%200%205px%3B%0A%7D%0Ah1%20%7B%0Amargin%2Dtop%3A%200%3B%0Afont%2Dsize%3A%2035px%3B%0Aline%2Dheight%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Aborder%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Apadding%2Dbottom%3A%202px%3B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Aborder%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Afont%2Dsize%3A%20120%25%3B%0A%7D%0Ah4%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0Amargin%2Dleft%3A%208px%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Ah5%2C%20h6%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23ccc%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%230033dd%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%236666ff%3B%20%7D%0Aa%3Avisited%20%7B%0Acolor%3A%20%23800080%3B%20%7D%0Aa%3Avisited%3Ahover%20%7B%0Acolor%3A%20%23BB00BB%3B%20%7D%0Aa%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Aa%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%0A" type="text/css" />
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Getting started examples</h1>
+
+
+
+<p><code>sfarrow</code> is designed to help read/write spatial vector data in “simple feature” format from/to Parquet files while maintaining coordinate reference system information. Essentially, this tool is attempting to connect <code>R</code> objects in <a href="https://r-spatial.github.io/sf/"><code>sf</code></a> and in <a href="https://arrow.apache.org/docs/r/"><code>arrow</code></a> and it relies on these packages for its internal work.</p>
+<p>A key goal is to support interoperability of spatial data in Parquet files. R objects (including <code>sf</code>) can be written to files with <code>arrow</code>; however, these do not necessarily maintain the spatial information or can be read in by Python. <code>sfarrow</code> implements a metadata format also used by Python <code>GeoPandas</code>, described here: <a href="https://github.com/geopandas/geo-arrow-spec">https://github.com/geopandas/geo-arrow-spec</a>. Note that these metadata are not stable yet, and <code>sfarrow</code> will warn you that it may change.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install from devtools::install_github(&quot;wcjochem/sfarrow@main)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sfarrow)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr, <span class="at">warn.conflicts =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div id="reading-and-writing-single-files" class="section level2">
+<h2>Reading and writing single files</h2>
+<p>A Parquet file (with <code>.parquet</code> extension) can be read using <code>st_read_parquet()</code> and pointing to the file system. This will create an <code>sf</code> spatial data object in memory which can then be used as normal using functions from <code>sf</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read an example dataset created from Python using geopandas</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>world <span class="ot">&lt;-</span> <span class="fu">st_read_parquet</span>(<span class="fu">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;world.parquet&quot;</span>, <span class="at">package =</span> <span class="st">&quot;sfarrow&quot;</span>))</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(world)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;sf&quot;         &quot;data.frame&quot;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>world</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Simple feature collection with 177 features and 5 fields</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Geometry type: GEOMETRY</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Dimension:     XY</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Bounding box:  xmin: -180 ymin: -90 xmax: 180 ymax: 83.64513</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; First 10 features:</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      pop_est     continent                     name iso_a3 gdp_md_est</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1     920938       Oceania                     Fiji    FJI  8.374e+03</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2   53950935        Africa                 Tanzania    TZA  1.506e+05</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3     603253        Africa                W. Sahara    ESH  9.065e+02</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4   35623680 North America                   Canada    CAN  1.674e+06</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  326625791 North America United States of America    USA  1.856e+07</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6   18556698          Asia               Kazakhstan    KAZ  4.607e+05</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7   29748859          Asia               Uzbekistan    UZB  2.023e+05</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8    6909701       Oceania         Papua New Guinea    PNG  2.802e+04</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9  260580739          Asia                Indonesia    IDN  3.028e+06</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10  44293293 South America                Argentina    ARG  8.794e+05</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                          geometry</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1  MULTIPOLYGON (((180 -16.067...</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2  POLYGON ((33.90371 -0.95, 3...</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3  POLYGON ((-8.66559 27.65643...</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4  MULTIPOLYGON (((-122.84 49,...</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  MULTIPOLYGON (((-122.84 49,...</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6  POLYGON ((87.35997 49.21498...</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7  POLYGON ((55.96819 41.30864...</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8  MULTIPOLYGON (((141.0002 -2...</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9  MULTIPOLYGON (((141.0002 -2...</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 MULTIPOLYGON (((-68.63401 -...</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(sf<span class="sc">::</span><span class="fu">st_geometry</span>(world))</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASAAAAEgCAMAAAAjXV6yAAADAFBMVEUAAAABAQECAgIDAwMEBAQFBQUGBgYHBwcICAgJCQkKCgoLCwsMDAwNDQ0ODg4PDw8QEBARERESEhITExMUFBQVFRUWFhYXFxcYGBgZGRkaGhobGxscHBwdHR0eHh4fHx8gICAhISEiIiIjIyMkJCQlJSUmJiYnJycoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1ubm5vb29wcHBxcXFycnJzc3N0dHR1dXV2dnZ3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiJiYmKioqLi4uMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKTk5OUlJSVlZWWlpaXl5eYmJiZmZmampqbm5ucnJydnZ2enp6fn5+goKChoaGioqKjo6OkpKSlpaWmpqanp6eoqKipqamqqqqrq6usrKytra2urq6vr6+wsLCxsbGysrKzs7O0tLS1tbW2tra3t7e4uLi5ubm6urq7u7u8vLy9vb2+vr6/v7/AwMDBwcHCwsLDw8PExMTFxcXGxsbHx8fIyMjJycnKysrLy8vMzMzNzc3Ozs7Pz8/Q0NDR0dHS0tLT09PU1NTV1dXW1tbX19fY2NjZ2dna2trb29vc3Nzd3d3e3t7f39/g4ODh4eHi4uLj4+Pk5OTl5eXm5ubn5+fo6Ojp6enq6urr6+vs7Ozt7e3u7u7v7+/w8PDx8fHy8vLz8/P09PT19fX29vb39/f4+Pj5+fn6+vr7+/v8/Pz9/f3+/v7////isF19AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAVO0lEQVR4nO2cB1gUV/e4z8z2XfrSm4ANAUFEFKQIgoIxUSxYQiyYqKhRiVhART67STQ2oiJ2Y//UaNTEGAVLIqjRfEk0aixRo2JXYiOU+5ulibBwBGn//3Pe53GdmXvmeud15s5tu8CICoG6LkB9hwQhkCAEEoRAghBIEAIJQiBBCCQIgQQhkCAEEoRAghBIEAIJQiBBCCQIgQQhkCAEEoRAghBIEAIJQiBBCCQIgQQhkCAEEoRAghBIEAIJQiBBCCQIgQQhkCAEEoRAghBIEAIJQiBBCCQIgQQhkCAEEoRAghBIEAIJQiBBCCQIgQQhkCAEEoRAghBIEAIJQiBBCCQIgQQhkCAEEoRAghBIEAIJQiBBCCQIgQQhkCAEEoRAghBIEAIJQiBBCCQIgQQhkCAEEoRAghBIEAIJQiBBCCQIgQQhkCAEEoRAghBIEAIJQiBBCCQIgQQhkCAEEoRAghBIEAIJQqhLQX/9tHlBTJ/w8HfDwz8ctfzEgUPpO7eOfqe7o4OA63sjDz+4+k8dlq6QOhP0cHATMQAYrN66dm4nMUiVrYL93bt6mH2249fLv/h6uJgJicCnFIXfP5z+n08mR8+/VLC7ol/fof+WyjE1wr3zxtzqLmctC8o+c+RoY8/7cougZnJQA1jF3Qjg9Ywkil2lb5asC5aBy0/kFO0OAM4KOIX1xoLdPUOiluaVOmNXc41Siw3VW+LaFbTaGLimeroRce1MdEFkzIHSUWG5dQBA48hhS569HhsrGldi7/k8Q+WINh3TS0acXhgZ2tzgi4KdF8dXTozobKo0kjo07ZdRFJISNXT6ur2/vUWRa1XQCltjc4Uc5DreIw30eDGneYoUYzLYhRVJqxNDHH4vGftHVzj12snZj17P7OlAAJNuscm7z/6ddXPUEAf7AfFJXx58xG71AOgx8duFkxfcYGy8RCL3VJjeqnqZa0TQoeEn8/9+nrZq6pZfLhdVFhmNmvjywBmoZRJXAJG4ucjpPT9OZDRo/TVNcrTRuqziLH5XQXLpZ4j9k5q06FjRUT8xJOSwh70bgMRIh5u/7k5R1JUtk+eP69ghvr1bZOQgc5lCpvJftiH5SGFq2szKXUuNCFrY9oDweXKqqXvEmE7NbMVig+ZjO3pIpEYqk4YADSe6mIK9BPT0zSW8HOy6TQjl1wnxZwGmFWZwLd0bDP56PdPMKWrNHQeOUQsv3dv3d/bcVq7hzb0C+R1u3NQHaWVkCjoTYpKXL78sbGwZ2HeQbhvP4E4K64bO7Sp3LTUiaKLcoPPIX7qB74OC/TwX7+nbjz15fCLldHIQcGBkL5PK+bjP3CFUnujI619rBJ5LGHvPNb+yuLc/yLzVgEWrjn6zNONVngf1Qc8A+suMBtjbQEtQ6rq6+YR3S/kiYExz+PENynT5SPqBTxOv/7nDuHLXUiOCJgsSoC0PMKDwgFv3V4lZL+4+Y7nP2TV2Y55I1jrJRNY60w64BMYWNMoW0gMNfRcJL2tfUCm4iKKTniaIuFXXLPmId1UzhLuow6C5fxQlXey9pRJFexBpXrlrqRFBD++en9UQpvHKoZoiCXe/W08tUUmGnUxUMhtHDytjgGjNkW7tn7OwtgVPy9kwV49RFwsiswfpBcHwxYbKcTdXwNz4kWueV7ZEOakHDvZ6wPJSx3MfVO7MmnuLPfaSjzh5/+lkSUPrPmrVsI+yS6V/3+AXlrt/Qy/p4mh5zz7xmkO5Q6Cl+nrZrB4o7m+CUx0iZUGNePu7lStG5o/7v1t2uK2bOYgi2jq5xn71S+XOr8HX/IaZvhKhMm4948T6aUIbTu/O68k79KceEx6lvaIrbKd+gxZx+Qfzvj1aKpePIJYxZ1u5yXODuaM5kNyrVBny1lt6hQYHWTp2Mdfxnv/tt5W/ippsB6X00lN29z2ev31jj5I//npy6gfNm45OPmAvNI4fZV2VjtP6X7tQDY2fsmfOwJu1nq15iVm+5vnO5kjPxOxyK+lLgU2PPdFsDBh62WFClS6iJgW922vNteKdK5xscul3cd7xmXrNhhYcvRKrf6BsFkmCkgZ+x4OlcrHIx4wHxRKF+varZCuQ2TlzHPQp3M8uej5zvY0a7mdsq73E3FuzP3B0y8AnVbqI2mtJT/lY2f1+maNDxSuFz6xNM3f0FPUue1KCxBHe58VgnxMJvkdSQHg98qpRpxlLtgNZQwPoJcTc254qMrJb/vdQrxgHUEV9dIOtn5MAY/0UQvcu54JEminEbIbRla7YC6jFrkaWN/DKV0jUwWGf5rILQsqPtsCZ2gE/X8tZoyzBxg34OF7zfHGervsedFbCjaec+taa3tHhhb2TQ6MDAOT+auXGrrZCn1YMMJgxc667397V9jBXCMj5uaqlrtW+2BwYsL6YNUO8XBRyoQn9IE0EDoqmTS2ho5ZzbrQ3+4e5QgFGRqDn6cYb5/5rKbL48MJnRfVR7jSQBnJrCnb+Tj/Mgb2wsZCHxSYdxLe15Prm1Kqgn91KH+kj+tJLqEOkAOYbsy4/LHPG88Q5ywx++tkTVOJ8QY3AWSUSBU+5aOXOjeCUvH/Xe3ln5qz34j75hzXkValZQmPimQLs1mja5KPAxHSjs9HgtypzrQra1KX0kXjgHLcncp9PP6b9jLUg/1Af+C4NdEBHqVEknhrkk2AlbDg1FgnPkrXKVgE8B/qa4GwfDjgTCZgIrexrNzZZgNgrbRKIhrxVmWtV0A9l7qCrk2+dcXeY/ri8M74DNUu1Ws466n9uobnPeHGvLXsH93AUDHUF61lOor6aMRNZWHHr8n+x24TG1YsJMj0Ae+EdOgaWvl2Za1VQtueCsgf7G90pe7CIfWA136P79GgP5ybQaDMHfgOS9iYEtFKCXBwlBT6gb37V1Ln0abeNwV4GLix3pFpy9e3KXLsjiudMV5YeSc4coq1qLuLlx1KFxHfSDAX3nzm32Be6TT4M5sWGukoz6z+nR1/4mgeXnk5CHWZR+rylilWLjdTteGjS8i2LXMtj0nt9DBtN3z/+YvGBC07hlyqI/5/xzElwluVwnGHfKylBA2Y/SR8h3DJxfaSHNMncMraB6wQN4Eap865Zp1xN0APedfHfb1ni2p7VeGIIvEQlGpjMMlasfT88zmdKheGxYUFcwBPNCylukq5+rL1KoZntMOT76BukCslyBy8+4Gtus0gZpal5VhWPgbBxQhNyeJe3GGototanfVaBfCvrpuJjTPr4d13dBXr/VH5s7igJOG7XbF3ghFf+gdx3PF5cF0G7f/eoObltyk+ZVmC9qrt4EHtfqKh1dKQcV1zHRWlplleJWhd0zwdEQi+pD3yo2butq8v/UW7sWM0bKlGz9Q2X35MKc2dsUKNRwlamn7EN5xQIEdu4EGF3YWPhbabP8a6FZ6aa7qum8tasoCelq2SBbBfQ/Z6xFvl3xv5eHeRahpMLOCMB68XA+QpusmViV9+zLMz5ypV0HaOtQuL3ghGL4A8mSyCsIFroi5jK7CZ16pbHTs8w1hlWTZdQs4IG6wSXnep8OuPrJowFbWX7vPyULrx0xMlyKlKhPXiAwQ9Wso1nLSXteT3OrRFwAsbtNPOJU9QSP8HCXmXP/FtwhZiD4zuF7hqn29hiyPnWp7TnWWlq+BFbBNu1HL1u+MWjvdYTbQzaMpZmbALQYeoLLWHD3IXelXQPiwLO+wnz8P+tdf64xp+mrWIv/t5SySltNH2TQ+6aKZFpFgfvWC8w43gwkZkL/lauraYrqOk66H9aH6CzPU2HBVkAhG7I+jN4bAevD/toa0tPkvfevV41PeuyndCYeab7CbvPaZoEa6CjHKBZQ5FDwV0yawy72btlBmM7bXlrXQ5C0oQOsNS2mi6grhYvXJkV2UTTCH6nghhbOXAKHV8eJM5zVvtJ7rJAhaaq9gBQz5zuY7n4ZUHYOZOns4M1I7FXInUt+4uAf8DYX7xpWvUUtA6XvzyOMQWDJYwdDW287tH19LKVVTOh72U3ggvkQa2QyuAkMwtkbJuBNCgaOH+/V7VwwKb4iQVbwuu+McAZxm4ZKhXlvx0rQ90uoAqEpsNGK8DIUSmBnWVSL9uINMNkwp84xlrDmEiO4815MGCXRGAl9LSK2Odq9X7BVldxohh6/MuetwvlueRqKWLdCnr8niBgrtgw+fYjS8nhp6WT70oAPrdyBu5mZmdOxCtHiqX952vaOgeFF9x/isNyPBtw5/O3omDsAk1bcYl/mggqOQFWDnW9BO9GivzBUifok8iJANrcLJW62xhc5NacTqOWKuHa3cLtwWxGTxiztb+e1Kjk+PbalvmzZV381aAZtp0plqyIVy2vlgLWtSB2WpnBftMxBSWIAfqXTn3UY/yKzx+y2cG6LiIQWQXGNANOJAe+o7G25sMSXlfWie36QASKG+xyatkpgipQ14Ie64vd7tpyoL9HLLduK/4xR3vYXuA5iWZcZDX/noq1tzD9SmvYdKW+AdMDrh0YWymso9KuaY2qFHUtaGkLb9BT+u/N37nTzchqSdozLWHLvJtyvGZsUGgbSOaFSM9pz+1lm/6y9LYD78e5gnhLRHvQGRU+TcguvfRoSCWoa0HRIEqwhJDi/WV9W9ntLj2NL3TqLAEcNBuGkBnDKf9bXna/mnQIOGQtVYaDerYKbMFyNuiPzQyRp1a5gHUtKFK84gQXeKbkoa8bJZaNSwcwnD4ym3naMBbjUja9iFRDRa/B/03Za2N38ebTP/VD28L1hkbgLOmnZU3EG1HXgjKa7h4hW5i9reQi1/jxWgKD5yg5bgezBsdzZcf+S5Aeag1gb2Zm1axNHluZxIG5QjI3d4W7uF/VCljXgtgu97smIIH4V0cOmWmrYWLHMGYiCeGGcqo28J3Qryg/y9und0bqdLH6ITv2qx/+aBd62Jy/LLRJRReqVL46F5TnvY6Fyd4H64OFB+5Zal2kEi40DC3AknMAzqfZDnZSvBvJ+OLq3rbe3F+h8qssf9rkfHaVZudrRNCZdDymmN3W2wZZsqumloXz7OmttEXdVQj9fZ1Y5iU0vdcGbVzpoBddcbbfmXoqH28wO9nKpU3RIesvhY/L2hsI5VIjgnbtqkz0YXeJKWPr5Z4FuxvLTL9q+A6Ak3MglviAwrjDOfU+77J9t5JcECUIn7krTY0fmxTNoUxbJHTzDSuaZdJCnT9iAi9MxGwHB4UjOJ2/1BaT1Tz5Sj9xJ1GHFM5oO/tbeduwogfmm0EWswu2Ht9ik6wLlmb11jzEzxaXXQBQIfVBEGsJHKcO5jQvrxOx5i+1xmx3Y24m7EvgHAwy2NweSyvqioY6zy1ZI89vkD+m+4nodBXKVi8EGXFeo3QlDeFcZnv7T37VHpMlz1J79lG42ljo3GI73dy2VpCfzutzkdlDffOlny/bAMWpD4IegaYUplIYsaJT+V9najPLGIzbZfOcYDBr2rwKLjZX+c3rB/Lc/99tSWvYDT7C5xTOLiPws/KjlgA3mn3OG3vhGUbHlDoQkVTlwtUHQcthlfAZwMm7BVT0fbiwkYzN5G3eoJL9Wei25X035Z0em7LyW+i5TieqXLj6IGiGZkiVOXiYmJW7TkhDoveQYEe3ClrQxZySbOzs2WTS16ttmw3M/wf8C8U/XKVlJrNi6oGgF3agmSeepNv7bIVxT6LnHEgvdxq2JA+jQtbt08g+1kZ5RNOMOF+YcF23+4NKlq4eCDrMixk7F/OOxxtdfCX5ytTH1eDd4t1xIqjku74eCNoGrmynr/umzBrJ/UqCR0jxk7vThu9cyXd9PRAUBwEsRlRO8+ft+Y3jC9f45azU53tWWM1poR4ICpFZb9ffU3P5b/26cKOnAT+twkht1L2gOyAJnybPwAO18+TUG1ddU720rCHFqHtBVzhY22J43svz2vtgGMnwfTUX6HXqXlCOHHj+BfOHyt/+Gl5WbaDwjal7QSyWA2iSdumXqnQla556IIhdmOg+oBrWo9YM9UFQvYYEIdQXQcfi3SPwqMpSDZ2X+iHoXCdoMut3PO4VT1OjWnktvf+ysGF899T+mIMHj6Zta9s6edUg3wn/PRw/IyFhSMvOa5KSdrzVbwrVB0H357cD43K+MFaCZ/kyMj6dsHtTfxdxq8k/7QvVN9DRe59lHA818giKaN/ep23I5t0Rgxd+P6mzd1xsQvyyryYOHDKksdMH48bsuVrFwtWRoOs/nS/+EnJqiBX3VZeu2sJyViWOXjx93nB/uam9WKmn4+VhpQ6bFBiY9HPBXfHyEetgM9rIdUFFHd3sk2tnJYQYe4SFj6poILscaktQ9l/X7m8atWDC+KM7buayY0YAtiNGuveaumj0NCcOJIteGJcdDLoWYR3Uc8Tw8VGLf3j868lHOYLWU9dKVyvRhr3f6LcYco5+M9tBrW05dsXUgqCnMWF+ziobe0MzmUyi1yZQZtDCAWDs2EXzdmyY+NHUET4RUX2HW7q9ttz+/vFvV0c3bVqdreSsfqb9qrDwtSYF3U/arWPXoLnKfWnKbyVXb9w7dfbX4lXM/zYCldPQLwpGOw5Gx51nbFeUj0Hr0P6fHilnuVnVSFMk1rdpn0N60EkKYNqvotfIJTG8983l2Am9p7K174pb6LXKvCPcX05V7t2Xx05dkxYVfXWvPGr0EXt2YZcaTD1jK3zPXp0fE2IplugHLfTUl0oNrFUmzUMjxlfyN15whpkNXnmyCufViKAD7q6eauOQqJkrtswDuV9Y+Gb0lHuHxwxNSr3x4NKZmhiZ1nBpUf+GOm4uAfF4aElq5ie6hp04cu/mnqUTBvX6eMgHwV0/Po6fUytkHv91Z334ia6JfbfWW1bWB0F7wusxyMKrWhH0/xMkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIZAgBBKEQIIQSBACCUIgQQgkCIEEIfwf5msRmlbI/MYAAAAASUVORK5CYII=" /><!-- --></p>
+<p>Similarly, a Parquet file can be written from an <code>sf</code> object using <code>st_write_parquet()</code> and specifying a path to the new file. Non-spatial objects cannot be written with <code>sfarrow</code>, and users should instead use <code>arrow</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># output the file to a new location</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># note the warning about possible future changes in metadata.</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write_parquet</span>(world, <span class="at">dsn =</span> <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">&quot;new_world.parquet&quot;</span>))</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: This is an initial implementation of Parquet/Feather file support and</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; geo metadata. This is tracking version 0.1.0 of the metadata</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; (https://github.com/geopandas/geo-arrow-spec). This metadata</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; specification may change and does not yet make stability promises.  We</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; do not yet recommend using this in a production setting unless you are</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; able to rewrite your Parquet/Feather files.</span></span></code></pre></div>
+</div>
+<div id="partitioned-datasets" class="section level2">
+<h2>Partitioned datasets</h2>
+<p>While reading/writing a Parquet file is nice, the real power of <code>arrow</code> comes from splitting big datasets into multiple files, or partitions, based on criteria that make it faster to query. There is currently basic support in <code>sfarrow</code> for multi-file spatial datasets. For additional dataset querying options, see the <code>arrow</code> <a href="https://arrow.apache.org/docs/r/articles/dataset.html">documentation</a>.</p>
+<div id="querying-and-reading-datasets" class="section level3">
+<h3>Querying and reading Datasets</h3>
+<p><code>sfarrow</code> accesses <code>arrows</code>’s <code>dplyr</code> interface to explore partitioned, Arrow datasets.</p>
+<p>For this example we will use a dataset which was created by randomly splitting the nc.shp file first into three groups and then further partitioning into two more random groups. This creates a nested set of files.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="fu">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;ds&quot;</span>, <span class="at">package =</span> <span class="st">&quot;sfarrow&quot;</span>), <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;split1=1/split2=1/part-3.parquet&quot; &quot;split1=1/split2=2/part-0.parquet&quot;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3] &quot;split1=2/split2=1/part-1.parquet&quot; &quot;split1=2/split2=2/part-5.parquet&quot;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [5] &quot;split1=3/split2=1/part-2.parquet&quot; &quot;split1=3/split2=2/part-4.parquet&quot;</span></span></code></pre></div>
+<p>The file tree is showing that the data were partitioned by the variables “split1” and “split2”. Those are the column names that were used for the random splits. This partitioning is in <a href="https://hive.apache.org/">“Hive style”</a> where the partitioning variables are in the paths.</p>
+<p>The first step is to open the Dataset using <code>arrow</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ds <span class="ot">&lt;-</span> arrow<span class="sc">::</span><span class="fu">open_dataset</span>(<span class="fu">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;ds&quot;</span>, <span class="at">package=</span><span class="st">&quot;sfarrow&quot;</span>))</span></code></pre></div>
+<p>For small datasets (as in the example) we can read the entire set of files into an <code>sf</code> object.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>nc_ds <span class="ot">&lt;-</span> <span class="fu">read_sf_dataset</span>(ds)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>nc_ds</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Simple feature collection with 100 features and 16 fields</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Dimension:     XY</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Bounding box:  xmin: -84.32385 ymin: 33.88199 xmax: -75.45698 ymax: 36.58965</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Geodetic CRS:  NAD27</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; First 10 features:</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     AREA PERIMETER CNTY_ CNTY_ID     NAME  FIPS FIPSNO CRESS_ID BIR74 SID74</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1  0.097     1.670  1833    1833 Hertford 37091  37091       46  1452     7</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2  0.062     1.547  1834    1834   Camden 37029  37029       15   286     0</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3  0.109     1.325  1841    1841   Person 37145  37145       73  1556     4</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4  0.081     1.288  1880    1880  Watauga 37189  37189       95  1323     1</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  0.044     1.158  1887    1887   Chowan 37041  37041       21   751     1</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6  0.086     1.267  1893    1893   Yadkin 37197  37197       99  1269     1</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7  0.170     1.680  1903    1903 Guilford 37081  37081       41 16184    23</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8  0.118     1.601  1946    1946  Madison 37115  37115       58   765     2</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9  0.134     1.755  1958    1958    Burke 37023  37023       12  3573     5</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 0.116     1.664  1964    1964 McDowell 37111  37111       56  1946     5</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    NWBIR74 BIR79 SID79 NWBIR79 split1 split2                       geometry</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1      954  1838     5    1237      1      1 MULTIPOLYGON (((-76.74506 3...</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2      115   350     2     139      1      1 MULTIPOLYGON (((-76.00897 3...</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3      613  1790     4     650      1      1 MULTIPOLYGON (((-78.8068 36...</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4       17  1775     1      33      1      1 MULTIPOLYGON (((-81.80622 3...</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5      368   899     1     491      1      1 MULTIPOLYGON (((-76.68874 3...</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6       65  1568     1      76      1      1 MULTIPOLYGON (((-80.49554 3...</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7     5483 20543    38    7089      1      1 MULTIPOLYGON (((-79.53782 3...</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8        5   926     2       3      1      1 MULTIPOLYGON (((-82.89597 3...</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9      326  4314    15     407      1      1 MULTIPOLYGON (((-81.81628 3...</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10     134  2215     5     128      1      1 MULTIPOLYGON (((-81.81628 3...</span></span></code></pre></div>
+<p>With large datasets, more often we will want query them and return a reduced set of the partitioned records. To create a query, the easiest way is to use <code>dplyr::filter()</code> on the partitioning (and/or other) variables to subset the rows and <code>dplyr::select()</code> to subset the columns. <code>read_sf_dataset()</code> will then use the <code>arrow_dplyr_query</code> and call <code>dplyr::collect()</code> to extract and then process the Arrow Table into <code>sf</code>.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>nc_d12 <span class="ot">&lt;-</span> ds <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>            <span class="fu">filter</span>(split1 <span class="sc">==</span> <span class="dv">1</span>, split2 <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>            <span class="fu">read_sf_dataset</span>()</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>nc_d12</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Simple feature collection with 20 features and 16 fields</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Dimension:     XY</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Bounding box:  xmin: -83.36472 ymin: 34.71101 xmax: -75.45698 ymax: 36.58965</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Geodetic CRS:  NAD27</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; First 10 features:</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     AREA PERIMETER CNTY_ CNTY_ID        NAME  FIPS FIPSNO CRESS_ID BIR74 SID74</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1  0.114     1.442  1825    1825        Ashe 37009  37009        5  1091     1</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2  0.143     1.630  1828    1828       Surry 37171  37171       86  3188     5</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3  0.153     2.206  1832    1832 Northampton 37131  37131       66  1421     9</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4  0.118     1.421  1836    1836      Warren 37185  37185       93   968     4</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  0.114     1.352  1838    1838     Caswell 37033  37033       17  1035     2</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6  0.143     1.663  1840    1840   Granville 37077  37077       39  1671     4</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7  0.108     1.483  1900    1900     Forsyth 37067  37067       34 11858    10</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8  0.111     1.392  1904    1904    Alamance 37001  37001        1  4672    13</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9  0.104     1.294  1907    1907      Orange 37135  37135       68  3164     4</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 0.122     1.516  1932    1932    Caldwell 37027  37027       14  3609     6</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    NWBIR74 BIR79 SID79 NWBIR79 split1 split2                       geometry</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1       10  1364     0      19      1      2 MULTIPOLYGON (((-81.47276 3...</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2      208  3616     6     260      1      2 MULTIPOLYGON (((-80.45634 3...</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3     1066  1606     3    1197      1      2 MULTIPOLYGON (((-77.21767 3...</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4      748  1190     2     844      1      2 MULTIPOLYGON (((-78.30876 3...</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5      550  1253     2     597      1      2 MULTIPOLYGON (((-79.53051 3...</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6      930  2074     4    1058      1      2 MULTIPOLYGON (((-78.74912 3...</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7     3919 15704    18    5031      1      2 MULTIPOLYGON (((-80.0381 36...</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8     1243  5767    11    1397      1      2 MULTIPOLYGON (((-79.24619 3...</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9      776  4478     6    1086      1      2 MULTIPOLYGON (((-79.01814 3...</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10     309  4249     9     360      1      2 MULTIPOLYGON (((-81.32813 3...</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(sf<span class="sc">::</span><span class="fu">st_geometry</span>(nc_d12), <span class="at">col=</span><span class="st">&quot;grey&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASAAAAEgCAMAAAAjXV6yAAAC8VBMVEUAAAABAQECAgIDAwMEBAQFBQUGBgYHBwcICAgKCgoLCwsMDAwNDQ0ODg4PDw8QEBARERESEhITExMUFBQVFRUWFhYXFxcYGBgZGRkaGhobGxscHBwdHR0eHh4fHx8gICAhISEiIiIjIyMkJCQlJSUmJiYnJycoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1ubm5vb29wcHBxcXFycnJzc3N1dXV2dnZ3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiJiYmKioqLi4uMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKTk5OUlJSVlZWWlpaXl5eYmJiZmZmampqbm5ucnJydnZ2enp6fn5+goKChoaGioqKjo6OkpKSlpaWmpqaoqKipqamqqqqrq6usrKytra2urq6vr6+wsLCxsbGysrKzs7O0tLS1tbW2tra3t7e4uLi5ubm6urq7u7u8vLy9vb2+vr6/v7/AwMDBwcHCwsLDw8PExMTFxcXGxsbHx8fIyMjJycnKysrLy8vMzMzNzc3Ozs7Pz8/Q0NDR0dHS0tLT09PU1NTV1dXW1tbX19fY2NjZ2dna2trb29vc3Nzd3d3e3t7g4ODh4eHi4uLj4+Pk5OTm5ubn5+fo6Ojp6enq6urr6+vs7Ozt7e3u7u7v7+/w8PDx8fHy8vLz8/P09PT19fX29vb39/f4+Pj5+fn6+vr7+/v8/Pz9/f3+/v7////5lpykAAAACXBIWXMAAA7DAAAOwwHHb6hkAAALuUlEQVR4nO2be1xUZR6Hh1YkDBzA4WIkcldQBElTQREE8Q6pmZQg6GqYbZqppbRWXhOrtRBEUTYTDRTFS5DAsbbabLXSLlZulm1mlpaWqQWev/ZcZrgMyLczzjTy+XyfPwbe+zvPnHnP730P6ETSJjp7T+Bmh4IAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCEBBAAoCUBCAggAUBKAgAAUBKAhAQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCEBBAAoCUBCAggAUBKAgAAUBKAhAQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCEBBAAoCUBCAggAUBKAgAAUBKAhAQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCEBBAAoCUBCAggAUBKAgAAUBKAhAQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCGAfQT918+oxYMTk7I+N6TdKy6prjxw9eeYnbf1cOH/+/NnzDZw5efKstadqH0GFsWXFeatyIlaryV/c4oZER4UE+ugdXzKv+l4Xt1t1Op1ThJL6LtzTPyAgInq7+JCbm4PO2cXF6RaXBvQ+Pu5vWnmq9hGUNU+QWdvtmpJ8caBgZMQm86rlAysqpYIdeiX1ke/OkpKSB7u8LabPqaiVWyR3TF5SUPCaqYMcw0zrTtU+gu5ZoL6d3kvkVL3TZtP7iys1r1qcrBSUdlVSR4LlxPhcUczJVFsE71s3qm+PkaYOXrx1nHWnahdBp132qm+nvOMVOR2y0fT++r9qXnft3UrBliAl9XaYnBhVJIobjU48v5Kyv+sdWaYmH37AynO1i6Bql7k18rvZ+IhfvpzOitljFNS7xRKydIpSsFFdgw5GyonRG0TxQF+1xa0/y/l1sUvV5F3brDxX+3zFPoyPkBcW/eSEw3LyckayUVDgB+ZVF8xUCvIGKKmqfnJiTKEonuiq5O/qrORf1RcvfUVO6n+x8lTtFAddu3/wDuFx/fvG5OEQobamMm9JZdcvzGtmP6KIWJOgpCoGyYmxBaJ4zlHJf3K0kl8f1+mu4GpBmJtm7ZnaK1C8kqUf67Wozph6yyu1k6tXaICng19YdPSdiYmJe0wVYwxh/WIThsf0LS0tfV8sjZOtpKyT1qAOAyc/JQhRxQ1d9p4hfUX3mA/UZMgfLZmo/SLpo5mNV8up9NXHv6kWr37qP794/fqC3Nykv5uKho2YkTY+1CNOole8uDVRFpT6onTN/Hf3itDguODfGzrZZ1gQEvDb9Qdc1d+Sad5kW41RK9W1aPIzppxxy6Tk1AFy5rzp4qYR8i+TRqllFw6tEhrbnpvqkHaujb7LdO9aMCN7CPrxzW3PvrD1f62UfNnjWVWQfI2oKMrSlUhy0iqxYKz8y5S5rXdc81Fbw36py7BgsvYQtFAXNTF1qNvIf7co6ZZWaYyoN5uyklbLRpS1OWanuCWm6CXhgMenlgx7zd3xjPZW9hBUf98Q6e1WLHBfI1469vG+6kFudwSE90s6JIo+sQekkldKKuK3myonyNdUWqwsyO+YeDaql29YVi/Lxk1yWKG9kT0E/dr9OTU69hvm5ecb2bNT/vaSTfmRW0XxUEp80bxZjgGuHfabKg9eKwc+SdJLrdMlOaN+19Aky8a9mNWtDtcywx6CnjEGwcJ9/somLCKrYZdxwd95wszVYt3xhrvRgDypbLC839h2x40OfKrDLs1t7CHosNMKVdCQFPm1slOJ/CP0kFx2+YJZ5TsLpLKodOklN+EGxjyxZdZfL4vTEzU3tMttfq++WBE0Xgn7lrkoidtPtFq3j7yRHRa1avPu6TdwkLHQI352fOJvJzu0eZ9rDfvEQVsN0+TV+O4EYV9eeaK8ZAs1zq0HusH9pRBxoC4pzN1ve6sV/hCjl0sj+B4TMx7S2tJOgeLXI4cUrqse79G1k1/QX7bJgl6Iar3mv0pl9ly7sfHCi6QhImvEz9x+1tjSXpH01eSosBDv2Z/VnXFWgmNhyiJbDqccQMVJl+DEFzS2tONW41rFK/KPL9xz5LPT4Les3P33G6Ur77V3vroqnhLP3SZ/BuPyRLEqSOO1eBPsxV6LmioIeztpD1Ha5rAuNi4uOlR/90GHzAc69pIiqfQnRfF3zxpt3dwEgsRvb18j1DqDJz47PtfabVCh8tVdnDF1WsaMaR4ZQvTLUm7qRG292EPQkbSeB5tlPDpFEMLeaLPNUh99vsZh8lxn1wjCZHf3cslTsT6sRzc5+pzTXVsvf6qg7+t/3fb6hT36yZnNP8ae+YIwto3V8/TycK+dxV5aY5gvhvpIkXqZfJxfG5lXt2GvnLlcY7hpI0Gfp476sEXmUGenjr1dnbs/JixpLiioX/KYnjOu39tA/+lSsD3f8bDGWfwemm/c1Czqa1riZmt87GETQRef9Z49p+tJs9wS15r9Nep852c1KzlUWlxYePS63b3nrDTLimnjuLA1fhk5oFodb6/HO6bMkWu0dWITQZtCpR3m1M5Cs8x6x7WCidkPa+nuYvgSqc1K39O46pHyJom3nNYaP5CUxssztELL0DYS9E/l6VWu75fNcpMNrn0q1AlPW6ypv52GLcLLbi3P18z5Zl+gx5Qmu931EZ0Tc3YLuwb3+cGUVe90XNPQthFU57NV1vCw9/dNc38+eXZmgvoQfUKutg4fTdrlX4AqvVsV2GF0ZYp/04jz68IU1/Au8680ZjhcadmyLWyzSIdtUE+WU8x2PhfHRSuGfDUut2cndpyO6lR59Prb9ipBWO7xhPqk4/mYavnHlQNNz+rf0HiXt5Gg7BmKoEq/g2YFdffGSstCUXfNe8/34Qdf0N+4wO28q5f8bfzBMCvELDqvE7I9tZ5G2kbQ0c7B8vZ5t0eL8Peq9xZBGPm0DcaMGGe6BSx3MKTH+TuNGx56sVmNb3vrnPRazztsFAcdjX9cmmnYwpYlnoHR0c6fWWWQLdmPD8iuPr5DvRzLDFlVqiDvOf947Lmt630eaPqcvq401aBPWrz7Yut9XRdbRdI5sYJQ4dzKN+n0f6qrX7/B0x0j9ySlP5ca5BI0Qt3GnRrfdaV6ASk397VdmjxFvFba02H4J5YMaytBv4XMFbL7WEfE9UhcJXk4UFY9KM+YURUSU54/c55B+ZOiWpcmf6+4SDf6E8sGsdleLD96nVdrD0+tyKNZ6lcqs+FB/pXsgFu8A52jlAspsLHmecenLf2sbCbohOd4hw226lxFfQ4tCPfNa8i6XDT0/rTuQcV7coZ5NY2HNAY/TbDdbn7n1LJLNutcYVuCKqjQ+6nGzAlP1kZOMriMWf+tdQa5GQ7MLGW/KfIpd2vcP4xdLmw2ZC7b8YHW0/nr0J4F1UaYIp+koobM4asFoeCRSbF+ulZiDAtoz4JWTjAJimg8OBi6eH3uE3OnTfActL+Npn+c9iwoYYVJkEfj/XJGQNSwSdmL1rT4a1ALaceCLt22z+jnVed6m43SjgUdd8q4N+nBnNwlCzPDbTdKOxYkHpv4zIbsMYkTM2a1+AcG69GeBf0pUBCAggAUBKAgAAUBKAhAQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCEBBAAoCUBCAggAUBKAgAAUBKAhAQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCEBBAAoCUBCAggAUBKAgAAUBKAhAQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCEBBAAoCUBCAggAUBKAgAAUBKAhAQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCEBBAAoCUBCAggAUBKAgAAUBKAhAQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCEBBAAoCUBCAggAUBKAgAAUBKAhAQQAKAlAQ4P+uYvxps+KCeAAAAABJRU5ErkJggg==" /><!-- --></p>
+<p>When using <code>select()</code> to read only a subset of columns, if the geometry column is not returned, the default behaviour of <code>sfarrow</code> is to throw an error from <code>read_sf_dataset</code>. If you do not need the geometry column for your analyses, then using <code>arrow</code> and not <code>sfarrow</code> should be sufficient. However, setting <code>find_geom = TRUE</code> in <code>read_sf_dataset</code> will read in any geometry columns in the metadata, in addition to the selected columns.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this command will throw an error</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># no geometry column selected for read_sf_dataset</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># nc_sub &lt;- ds %&gt;% </span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#             select(&#39;FIPS&#39;) %&gt;% # subset of columns</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#             read_sf_dataset()</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># set find_geom</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>nc_sub <span class="ot">&lt;-</span> ds <span class="sc">%&gt;%</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>            <span class="fu">select</span>(<span class="st">&#39;FIPS&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># subset of columns</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>            <span class="fu">read_sf_dataset</span>(<span class="at">find_geom =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>nc_sub</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Simple feature collection with 100 features and 1 field</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Dimension:     XY</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Bounding box:  xmin: -84.32385 ymin: 33.88199 xmax: -75.45698 ymax: 36.58965</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Geodetic CRS:  NAD27</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; First 10 features:</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     FIPS                       geometry</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1  37091 MULTIPOLYGON (((-76.74506 3...</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2  37029 MULTIPOLYGON (((-76.00897 3...</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3  37145 MULTIPOLYGON (((-78.8068 36...</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4  37189 MULTIPOLYGON (((-81.80622 3...</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  37041 MULTIPOLYGON (((-76.68874 3...</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6  37197 MULTIPOLYGON (((-80.49554 3...</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7  37081 MULTIPOLYGON (((-79.53782 3...</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8  37115 MULTIPOLYGON (((-82.89597 3...</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9  37023 MULTIPOLYGON (((-81.81628 3...</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 37111 MULTIPOLYGON (((-81.81628 3...</span></span></code></pre></div>
+</div>
+<div id="writing-to-datasets" class="section level3">
+<h3>Writing to Datasets</h3>
+<p>To write an <code>sf</code> object into multiple files, we can again construct a query using <code>dplyr::group_by()</code> to define the partitioning variables. The result is then passed to <code>sfarrow</code>.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>world <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(continent) <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_sf_dataset</span>(<span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">&quot;world_ds&quot;</span>), </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">format =</span> <span class="st">&quot;parquet&quot;</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">hive_style =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: This is an initial implementation of Parquet/Feather file support and</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; geo metadata. This is tracking version 0.1.0 of the metadata</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; (https://github.com/geopandas/geo-arrow-spec). This metadata</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; specification may change and does not yet make stability promises.  We</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; do not yet recommend using this in a production setting unless you are</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; able to rewrite your Parquet/Feather files.</span></span></code></pre></div>
+<p>In this example we are not using Hive style. This results in the partitioning variable not being in the folder paths.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">&quot;world_ds&quot;</span>))</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;Africa&quot;                  &quot;Antarctica&quot;             </span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3] &quot;Asia&quot;                    &quot;Europe&quot;                 </span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [5] &quot;North America&quot;           &quot;Oceania&quot;                </span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [7] &quot;Seven seas (open ocean)&quot; &quot;South America&quot;</span></span></code></pre></div>
+<p>To read this style of Dataset, we must specify the partitioning variables when it is opened.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>arrow<span class="sc">::</span><span class="fu">open_dataset</span>(<span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">&quot;world_ds&quot;</span>), </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">partitioning =</span> <span class="st">&quot;continent&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(continent <span class="sc">==</span> <span class="st">&quot;Africa&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_sf_dataset</span>()</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Simple feature collection with 51 features and 5 fields</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Geometry type: GEOMETRY</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Dimension:     XY</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Bounding box:  xmin: -17.62504 ymin: -34.81917 xmax: 51.13387 ymax: 37.34999</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; First 10 features:</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     pop_est            name iso_a3 gdp_md_est continent</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1  53950935        Tanzania    TZA   150600.0    Africa</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2    603253       W. Sahara    ESH      906.5    Africa</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3  83301151 Dem. Rep. Congo    COD    66010.0    Africa</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4   7531386         Somalia    SOM     4719.0    Africa</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  47615739           Kenya    KEN   152700.0    Africa</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6  37345935           Sudan    SDN   176300.0    Africa</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7  12075985            Chad    TCD    30590.0    Africa</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8  54841552    South Africa    ZAF   739100.0    Africa</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9   1958042         Lesotho    LSO     6019.0    Africa</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 13805084        Zimbabwe    ZWE    28330.0    Africa</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                          geometry</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1  POLYGON ((33.90371 -0.95, 3...</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2  POLYGON ((-8.66559 27.65643...</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3  POLYGON ((29.34 -4.499983, ...</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4  POLYGON ((41.58513 -1.68325...</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  POLYGON ((39.20222 -4.67677...</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6  POLYGON ((24.56737 8.229188...</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7  POLYGON ((23.83766 19.58047...</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8  POLYGON ((16.34498 -28.5767...</span></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9  POLYGON ((28.97826 -28.9556...</span></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 POLYGON ((31.19141 -22.2515...</span></span></code></pre></div>
+</div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
