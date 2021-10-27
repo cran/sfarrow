@@ -1,7 +1,7 @@
 Package: sfarrow
 Title: Read/Write Simple Feature Objects ('sf') with 'Apache' 'Arrow'
-Version: 0.4.0
-Date: 2021-06-17
+Version: 0.4.1
+Date: 2021-10-25
 Authors@R: 
     person(given = "Chris",
            family = "Jochem",
@@ -19,8 +19,8 @@ Imports: sf, arrow, jsonlite, dplyr,
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2021-06-18 10:58:23 UTC; jochem
+Packaged: 2021-10-27 16:15:34 UTC; jochem
 Author: Chris Jochem [aut, cre] (<https://orcid.org/0000-0003-2192-5988>)
 Maintainer: Chris Jochem <w.c.jochem@soton.ac.uk>
 Repository: CRAN
-Date/Publication: 2021-06-21 06:20:05 UTC
+Date/Publication: 2021-10-27 16:30:02 UTC

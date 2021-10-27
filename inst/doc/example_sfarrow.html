@@ -143,10 +143,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <p><code>sfarrow</code> is designed to help read/write spatial vector data in “simple feature” format from/to Parquet files while maintaining coordinate reference system information. Essentially, this tool is attempting to connect <code>R</code> objects in <a href="https://r-spatial.github.io/sf/"><code>sf</code></a> and in <a href="https://arrow.apache.org/docs/r/"><code>arrow</code></a> and it relies on these packages for its internal work.</p>
 <p>A key goal is to support interoperability of spatial data in Parquet files. R objects (including <code>sf</code>) can be written to files with <code>arrow</code>; however, these do not necessarily maintain the spatial information or can be read in by Python. <code>sfarrow</code> implements a metadata format also used by Python <code>GeoPandas</code>, described here: <a href="https://github.com/geopandas/geo-arrow-spec">https://github.com/geopandas/geo-arrow-spec</a>. Note that these metadata are not stable yet, and <code>sfarrow</code> will warn you that it may change.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install from devtools::install_github(&quot;wcjochem/sfarrow@main)</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sfarrow)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr, <span class="at">warn.conflicts =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install from CRAN with install.packages(&#39;sfarrow&#39;)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or install from devtools::install_github(&quot;wcjochem/sfarrow@main)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># load the library</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sfarrow)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr, <span class="at">warn.conflicts =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <div id="reading-and-writing-single-files" class="section level2">
 <h2>Reading and writing single files</h2>
 <p>A Parquet file (with <code>.parquet</code> extension) can be read using <code>st_read_parquet()</code> and pointing to the file system. This will create an <code>sf</code> spatial data object in memory which can then be used as normal using functions from <code>sf</code>.</p>

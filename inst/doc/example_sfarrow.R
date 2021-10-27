@@ -5,7 +5,8 @@ knitr::opts_chunk$set(
 )
 
 ## ----setup--------------------------------------------------------------------
-# install from devtools::install_github("wcjochem/sfarrow@main)
+# install from CRAN with install.packages('sfarrow')
+# or install from devtools::install_github("wcjochem/sfarrow@main)
 # load the library
 library(sfarrow)
 library(dplyr, warn.conflicts = FALSE)
